@@ -13,12 +13,12 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mayo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+042c8f238d381fef1ad74b26cdfc0ba3e862e902")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+64e1cd1a39ed184c94d8ed45915b24f611d51a06")]
 [assembly: System.Reflection.AssemblyProductAttribute("mayo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mayo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("MacCatalyst18.4")]
-[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst15.0")]
+[assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("MacCatalyst18.4")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 
