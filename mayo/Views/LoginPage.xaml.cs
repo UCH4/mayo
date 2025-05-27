@@ -1,7 +1,7 @@
 // Views/LoginPage.xaml.cs
-using Plugin.Firebase.Auth; // Contiene IFirebaseAuth y IAuthResult
-using Plugin.Firebase.Auth.FirebaseAuthException; // <-- ¡Este es el using CORRECTO para la excepción!
-using Microsoft.Maui.Platform; // Necesario para MauiApplication.Current.Services si se usa el ServiceHelper
+using Plugin.Firebase.Auth; // Contiene IFirebaseAuth, IAuthResult
+using Plugin.Firebase.Auth.FirebaseAuthException; // <-- ¡Este es el using CORRECTO para la excepción en v3.1.4!
+using Microsoft.Maui.Platform; // Necesario para MauiApplication.Current?.Services
 
 namespace mayo
 {
@@ -18,7 +18,7 @@ namespace mayo
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
             string email = EmailEntry.Text;
-            string password = PasswordEntry.Text;
+            string password = PasswordEntry.Text; // Asegúrate de que sea PasswordEntry.Text
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
@@ -29,9 +29,9 @@ namespace mayo
             try
             {
                 var result = await _firebaseAuth.CreateUserAsync(email, password);
-                StatusLabel.Text = $"Registro exitoso para: {result.User.Email}";
+                StatusLabel.Text = $"Registro exitoso para: {result.User.Email}"; // Esto DEBE funcionar ahora
             }
-            catch (Plugin.Firebase.Auth.FirebaseAuthException.FirebaseAuthException ex) // <-- Referencia COMPLETA
+            catch (Plugin.Firebase.Auth.FirebaseAuthException.FirebaseAuthException ex) // <-- ¡Referencia COMPLETA de nuevo!
             {
                 StatusLabel.Text = $"Error de registro: {ex.Reason}";
             }
@@ -44,7 +44,7 @@ namespace mayo
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             string email = EmailEntry.Text;
-            string password = PasswordEntry.Text;
+            string password = PasswordEntry.Text; // Asegúrate de que sea PasswordEntry.Text
 
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
@@ -55,9 +55,9 @@ namespace mayo
             try
             {
                 var result = await _firebaseAuth.SignInWithEmailAndPasswordAsync(email, password);
-                StatusLabel.Text = $"Inicio de sesión exitoso para: {result.User.Email}";
+                StatusLabel.Text = $"Inicio de sesión exitoso para: {result.User.Email}"; // Esto DEBE funcionar ahora
             }
-            catch (Plugin.Firebase.Auth.FirebaseAuthException.FirebaseAuthException ex) // <-- Referencia COMPLETA
+            catch (Plugin.Firebase.Auth.FirebaseAuthException.FirebaseAuthException ex) // <-- ¡Referencia COMPLETA de nuevo!
             {
                 StatusLabel.Text = $"Error de inicio de sesión: {ex.Reason}";
             }

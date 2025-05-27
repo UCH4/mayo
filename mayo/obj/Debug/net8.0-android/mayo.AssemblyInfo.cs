@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mayo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+d6a26d668bc503582133e559fc54b350adf05e13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b8fc981868cede82a6f96488e712d6b320e22c36")]
 [assembly: System.Reflection.AssemblyProductAttribute("mayo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mayo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
